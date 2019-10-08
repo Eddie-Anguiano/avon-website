@@ -1,0 +1,81 @@
+//-----------------------------------
+//ANIMATE1*/
+//-----------------------------------
+//On-focus the input placeholder text floats upward and becomes a header
+
+@mixin animate1($width, $color) {
+  // Required HTML:
+  // <div class="my-animate1-form">
+  //     <input
+  //       type="text"
+  //       class="my-animate1-form__input"
+  //       autocomplete="off"
+  //       required
+  //     />
+  //     <label class="my-animate1-form__label">
+  //       <span class="my-animate1-form__label-content">name</span>
+  //     </label>
+  //   </div>
+
+  input:required:invalid {
+    box-shadow: none;
+  }
+
+  $form: "my-animate1-form";
+  $label-name: "my-animate1-form__label";
+  $content-name: "my-animate1-form__label-content";
+
+  .#{$form} {
+    position: relative;
+    width: $width;
+    height: 55px;
+    overflow: hidden;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      border: none;
+      outline: none;
+
+      &:focus + .#{$label-name} .#{$content-name},
+      &:valid + .#{$label-name} .#{$content-name} {
+        transform: translateY(-150%);
+        font-size: 14px;
+        color: $color;
+      }
+      &:focus + .#{$label-name}::after,
+      &:valid + .#{$label-name}::after {
+        transform: translateX(0%);
+      }
+    }
+    .#{$label-name} {
+      position: absolute;
+      bottom: 0px;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border-bottom: 1px solid black;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+        border-bottom: 3px solid $color;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+      }
+
+      .#{$content-name} {
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
