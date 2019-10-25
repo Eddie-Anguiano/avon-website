@@ -16,3 +16,21 @@
   background-position: $bg-pos;
   background-repeat: $bg-repeat;
 }
+
+//Grid area names
+
+@mixin grid-areas($element) {
+  .#{$element}__left {
+    grid-area: #{$element}-left;
+  }
+
+  .#{$element}__content {
+    grid-area: $element;
+  }
+
+  .#{$element}__right {
+    grid-area: #{$element}-right;
+  }
+}
+
+//Background Colors

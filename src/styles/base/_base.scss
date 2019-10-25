@@ -22,7 +22,16 @@ h6 {
   font-family: $font-family--secondary;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 p a {
   color: $color-matte-purple;
   text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
 }

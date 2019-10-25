@@ -1,0 +1,26 @@
+.footer__left,
+.footer__content,
+.footer__right {
+  background-color: $color-light-skin;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__links {
+  display: flex;
+  list-style-type: none;
+
+  font: {
+    font: $font-family--secondary;
+    size: em(11px);
+  }
+
+  &__item {
+    margin-right: em(50px);
+    letter-spacing: em(2px);
+  }
+}

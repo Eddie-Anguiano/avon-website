@@ -1,0 +1,19 @@
+/*-------------------------------*/
+/*Outer Grid*/
+/*-------------------------------*/
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(em(20px), 1fr) minmax(0px, em(1400px)) minmax(em(20px), 1fr);
+  grid-template-rows: em(40px) 1fr em(40px);
+  grid-template-areas:
+    'header-left header header-right'
+    'main-left main main-right'
+    'footer-left footer footer-right';
+}
+
+@include grid-areas(header);
+@include grid-areas(main);
+@include grid-areas(footer);
