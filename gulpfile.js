@@ -97,6 +97,7 @@ const htmlReload = './build/*.html';
 
 function watch() {
   browserSync.init({
+    browser: 'firefox developer edition',
     server: {
       baseDir: './build/'
     }

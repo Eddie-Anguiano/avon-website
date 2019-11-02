@@ -6,3 +6,20 @@
     clear: both;
   }
 }
+
+// Center Content
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Typography
+%link-heading {
+  font: {
+    family: $font-family--secondary;
+    size: rem(20px);
+    weight: $font-weight--regular;
+  }
+  margin-bottom: 10px;
+}

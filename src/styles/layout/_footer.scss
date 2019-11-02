@@ -16,11 +16,12 @@
 
   font: {
     font: $font-family--secondary;
-    size: em(11px);
+    size: rem(11px);
   }
 
-  &__item {
-    margin-right: em(50px);
-    letter-spacing: em(2px);
+  &__item a {
+    margin-right: rem(40px);
+    letter-spacing: rem(2px);
+    padding: rem(10px) rem(10px);
   }
 }

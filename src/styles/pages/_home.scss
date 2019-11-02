@@ -1,0 +1,37 @@
+// Profile
+.profile__background {
+  height: rem(250px);
+  width: rem(500px);
+  background-color: white;
+  border-radius: rem(200px) $border-radius--small $border-radius--small rem(200px);
+}
+
+// Call to action
+.call-to-action__text {
+  font-style: italic;
+  font-weight: $font-weight--light;
+  font-size: rem(24px);
+  color: $color-dark-brown;
+}
+
+// Shop
+.shop__heading {
+  @extend %link-heading;
+  color: $color-dark-brown;
+}
+
+// blog
+.blog__section {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: $border-radius--small;
+}
+
+//FAQ
+.faq__section {
+  height: 100%;
+  width: 80%;
+  background-color: $color-matte-purple;
+  border-radius: $border-radius--small;
+}
