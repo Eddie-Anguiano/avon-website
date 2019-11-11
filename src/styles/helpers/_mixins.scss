@@ -1,24 +1,41 @@
 // Background Images
 @mixin img-bg(
-  $h,
-  $w,
-  $img-name,
-  $display: block,
+  $img-path,
+  $overlay: transparent,
+  $opacity: 0,
   $bg-pos: center,
   $bg-repeat: no-repeat,
   $bg-size: cover
 ) {
-  background-image: url('#{$img-path}/#{$img-name}');
-  height: $h;
-  width: $w;
-  display: $display;
+  background: linear-gradient(
+      transparentize($overlay, $opacity),
+      transparentize($overlay, $opacity)
+    ),
+    url(#{$img-path});
   background-size: $bg-size;
   background-position: $bg-pos;
   background-repeat: $bg-repeat;
 }
 
-//Grid area names
+@mixin mq($break) {
+  @if $break == 'small' {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $break == 'medium' {
+    @media (min-width: $breakpoint-md + 1) {
+      @content;
+    }
+  } @else if $break == 'large' {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else {
+    @error "No value could be retrieced for '#{$break}'";
+  }
+}
 
+// Grid area names
 @mixin grid-areas($element) {
   .#{$element}__left {
     grid-area: #{$element}-left;

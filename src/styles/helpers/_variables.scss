@@ -10,6 +10,11 @@ $font-weight--regular: 400;
 $font-weight--semi-bold: 600;
 $font-weight--bold: 700;
 
+//Media Queries
+$breakpoint-lg: 1126px;
+$breakpoint-md: 800px;
+$breakpoint-sm: 300px;
+
 //Colors
 $color-white: #fff;
 $color-black: black;
@@ -23,6 +28,7 @@ $color-dark-brown: #4d2a22;
 //Text
 $base__font-size: 16px;
 $base__line: 24px;
+$base__word-spacing: 3px;
 
 //images
 $img-path: '../images';

@@ -1,37 +1,99 @@
 // Profile
 .profile__background {
-  height: rem(250px);
-  width: rem(500px);
-  background-color: white;
-  border-radius: rem(200px) $border-radius--small $border-radius--small rem(200px);
+  height: auto;
+  width: 90%;
+  border-radius: $border-radius--small;
 }
 
-// Call to action
-.call-to-action__text {
-  font-style: italic;
-  font-weight: $font-weight--light;
-  font-size: rem(24px);
-  color: $color-dark-brown;
+.profile__picture {
+  height: rem(200px);
+  width: rem(200px);
+  background-color: $color-white;
+  shape-outside: circle();
+  border-radius: 50%;
+  float: left;
+  margin: 15px;
+}
+
+.profile__text {
+  margin-top: 10px;
+  margin-right: 10px;
+  display: block;
 }
 
 // Shop
 .shop__heading {
-  @extend %link-heading;
-  color: $color-dark-brown;
+  position: relative;
+  z-index: 1000;
+  margin-bottom: rem(20px);
+}
+
+.shop__pic {
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: $color-dark-skin;
+    position: absolute;
+    top: 20px;
+    left: -25px;
+    z-index: -1;
+    border-radius: $border-radius--small;
+  }
+
+  &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: $color-dark-skin;
+    position: absolute;
+    bottom: 20px;
+    right: -25px;
+    z-index: -1000;
+    border-radius: $border-radius--small;
+  }
 }
 
 // blog
 .blog__section {
+  @include img-bg('../images/brushes.png', $color-white, 0.1);
+  display: flex;
   height: 100%;
+  padding: 25px;
   width: 100%;
   background-color: white;
   border-radius: $border-radius--small;
 }
 
+.blog__heading,
+.product__heading {
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.blog__cards,
+.product__cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  @include card('../images/home-page/card-pic.png');
+}
+
 //FAQ
 .faq__section {
   height: 100%;
-  width: 80%;
+  width: 100%;
   background-color: $color-matte-purple;
   border-radius: $border-radius--small;
 }

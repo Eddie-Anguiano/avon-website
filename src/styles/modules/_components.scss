@@ -1,0 +1,55 @@
+// Buttons
+.call-to-action__button {
+  @extend %center;
+  height: rem(50px);
+  width: rem(130px);
+  background-color: $color-matte-pink;
+  border-radius: $border-radius--small;
+  border: 1px solid $color-white;
+  color: $color-white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-matte-pink;
+    border: 2px solid $color-matte-pink;
+  }
+}
+
+// Cards
+@mixin card($path) {
+  display: flex;
+  flex-direction: column;
+  height: rem(300px);
+  width: rem(180px);
+  background-color: opacify($color-matte-purple, 0.9);
+  border-radius: $border-radius--small;
+  @extend %box-shadow;
+
+  &__pic {
+    flex: 1;
+    @include img-bg($path);
+  }
+
+  &__text {
+    padding: rem(10px);
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__summary {
+    height: rem(120px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  &__link {
+    text-align: right;
+  }
+}

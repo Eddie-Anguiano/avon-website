@@ -18,8 +18,12 @@
 %link-heading {
   font: {
     family: $font-family--secondary;
-    size: rem(20px);
+    size: rem(18px);
     weight: $font-weight--regular;
   }
-  margin-bottom: 10px;
+}
+
+// Box Shadow
+%box-shadow {
+  box-shadow: rem(-5px) rem(5px) rem(5px) rgba($color: black, $alpha: 0.3);
 }

@@ -1,0 +1,121 @@
+/*-------------------------------*/
+/*BASE*/
+/*-------------------------------*/
+
+body {
+  font-family: $font-family--primary;
+  word-spacing: $base__word-spacing;
+}
+
+h1,
+h2,
+h3 h4,
+h5,
+h6 {
+  font-family: $font-family--secondary;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  color: $color-matte-purple;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*-------------------------------*/
+/*NAV*/
+/*-------------------------------*/
+
+// Site Header
+.header__content {
+  color: $color-dark-brown;
+}
+
+.header__logo a {
+  font: {
+    family: $font-family--secondary;
+    size: rem(22px);
+  }
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-dark-purple;
+  }
+}
+
+.nav {
+  font-family: $font-family--secondary;
+  letter-spacing: rem(1.5px);
+}
+
+// Site Footer
+.footer__links {
+  font: {
+    font: $font-family--secondary;
+    size: rem(12px);
+  }
+
+  &__item a {
+    letter-spacing: rem(2px);
+    color: $color-dark-brown;
+  }
+}
+
+/*-------------------------------*/
+/*Home Page*/
+/*-------------------------------*/
+
+// Profile
+.profile__text {
+  color: $color-dark-brown;
+}
+
+// Call to action
+.call-to-action__text {
+  font-style: italic;
+  font-weight: $font-weight--light;
+  font-size: rem(24px);
+  color: $color-dark-brown;
+}
+
+// Shop
+.shop__heading {
+  @extend %link-heading;
+  color: $color-dark-brown;
+}
+
+// Blog Section
+.blog__heading,
+.product__heading {
+  @extend %link-heading;
+  text-decoration: underline;
+}
+
+/*-------------------------------*/
+/*Modules*/
+/*-------------------------------*/
+
+// Cards
+.card {
+  color: white;
+}
+
+.card__title {
+  font: {
+    family: $font-family--primary;
+    weight: $font-weight--light;
+    size: 14px;
+    style: italic;
+  }
+}
+
+.card__summary {
+  font-size: 14px;
+}

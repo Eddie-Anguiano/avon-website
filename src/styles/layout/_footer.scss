@@ -14,14 +14,8 @@
   display: flex;
   list-style-type: none;
 
-  font: {
-    font: $font-family--secondary;
-    size: rem(11px);
-  }
-
   &__item a {
     margin-right: rem(40px);
-    letter-spacing: rem(2px);
     padding: rem(10px) rem(10px);
   }
 }

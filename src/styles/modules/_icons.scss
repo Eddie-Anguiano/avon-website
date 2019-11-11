@@ -1,0 +1,16 @@
+//Contact Icons
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: $border-radius--small;
+  margin: rem(15px) 0 0 0;
+
+  .icons__item {
+    height: rem(30px);
+    width: rem(30px);
+    padding: rem(5px) rem(3px);
+    color: $color-dark-brown;
+  }
+}
