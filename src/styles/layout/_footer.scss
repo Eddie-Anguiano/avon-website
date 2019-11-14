@@ -2,6 +2,9 @@
 .footer__content,
 .footer__right {
   background-color: $color-light-skin;
+  @include d1-mq('large') {
+    background: $color-dark-skin;
+  }
 }
 
 .footer__content {

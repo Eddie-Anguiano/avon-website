@@ -17,7 +17,9 @@
   background-repeat: $bg-repeat;
 }
 
-@mixin mq($break) {
+// Media queries
+
+@mixin m1-mq($break) {
   @if $break == 'small' {
     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
       @content;
@@ -35,7 +37,15 @@
   }
 }
 
-// Grid area names
+@mixin d1-mq($break) {
+  @if $break == 'large' {
+    @media (max-width: $breakpoint-lg) and (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+}
+
+//Grid area names
 @mixin grid-areas($element) {
   .#{$element}__left {
     grid-area: #{$element}-left;

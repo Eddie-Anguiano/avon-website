@@ -3,6 +3,10 @@
   height: auto;
   width: 90%;
   border-radius: $border-radius--small;
+
+  @include d1-mq('large') {
+    width: 100%;
+  }
 }
 
 .profile__picture {
@@ -61,6 +65,8 @@
 .blog__section {
   @include img-bg('../images/brushes.png', $color-white, 0.1);
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   height: 100%;
   padding: 25px;
   width: 100%;
@@ -81,9 +87,19 @@
   flex-direction: column;
 }
 
+.blog__cards {
+  @include d1-mq('large') {
+    margin-bottom: 20px;
+  }
+}
+
+.card + .card {
+  margin-left: 25px;
+}
+
 .cards__container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .card {
@@ -92,8 +108,44 @@
 
 //FAQ
 .faq__section {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  padding: 10%;
   height: 100%;
   width: 100%;
   background-color: $color-matte-purple;
   border-radius: $border-radius--small;
+}
+
+.faq__header {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.faq__sub-header {
+  position: relative;
+  margin-bottom: 5%;
+
+  &::before {
+    content: '';
+    height: rem(5px);
+    width: rem(5px);
+    border-radius: 50%;
+    position: absolute;
+    left: rem(-10px);
+    top: rem(8px);
+    background-color: $color-white;
+  }
+}
+
+.faq__content {
+  max-height: rem(215px);
+  overflow: scroll;
+  margin-bottom: 10%;
+}
+
+.faq__link {
+  text-align: right;
 }
