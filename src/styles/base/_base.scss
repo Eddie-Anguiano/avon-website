@@ -8,3 +8,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  @include d1-mq('large') {
+    overflow-x: hidden;
+    position: relative;
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.--blackout::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 100;
+}

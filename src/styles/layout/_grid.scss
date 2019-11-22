@@ -7,7 +7,7 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(rem(20px), 1fr) minmax(0px, rem(1400px)) minmax(rem(20px), 1fr);
-  grid-template-rows: rem(40px) 1fr rem(40px);
+  grid-template-rows: rem(45px) 1fr rem(45px);
   grid-template-areas:
     'header-left header header-right'
     'main-left main main-right'

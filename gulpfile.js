@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
@@ -59,6 +60,18 @@ function javascript() {
   return gulp
     .src(jsSRC)
     .pipe(concat(minJS))
+    .pipe(
+      babel({
+        presets: [
+          [
+            '@babel/env',
+            {
+              modules: false
+            }
+          ]
+        ]
+      })
+    )
     .pipe(uglify())
     .pipe(lineec())
     .pipe(gulp.dest(buildJS));
