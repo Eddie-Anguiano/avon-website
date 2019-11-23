@@ -17,8 +17,11 @@
   background-repeat: $bg-repeat;
 }
 
-// Media queries
+/*-------------------------------*/
+/*MEDIA QUERIES*/
+/*-------------------------------*/
 
+// Mobile first
 @mixin m1-mq($break) {
   @if $break == 'small' {
     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
@@ -37,9 +40,18 @@
   }
 }
 
+// Desktop first
 @mixin d1-mq($break) {
   @if $break == 'large' {
     @media (max-width: $breakpoint-lg) and (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $break == 'large-keep' {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $break == 'medium' {
+    @media (max-width: $breakpoint-md) {
       @content;
     }
   }

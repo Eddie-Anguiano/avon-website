@@ -2,7 +2,7 @@
 .footer__content,
 .footer__right {
   background-color: $color-light-skin;
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     background: $color-dark-skin;
   }
 }
@@ -16,9 +16,14 @@
 .footer__links {
   display: flex;
   list-style-type: none;
+  justify-content: space-evenly;
 
   &__item a {
     margin-right: rem(40px);
     padding: rem(10px) rem(10px);
+
+    @include d1-mq('medium') {
+      margin: 0;
+    }
   }
 }

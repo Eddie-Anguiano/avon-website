@@ -85,6 +85,11 @@ li {
   color: $color-dark-brown;
 }
 
+// Separator (mobile)
+.separator__text {
+  color: $color-dark-brown;
+}
+
 // Shop
 .shop__heading {
   @extend %link-heading;
@@ -123,7 +128,8 @@ li {
   color: $color-white;
 }
 
-.card__title {
+.card__title,
+.card__link {
   font: {
     family: $font-family--primary;
     weight: $font-weight--light;

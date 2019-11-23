@@ -1,20 +1,20 @@
 .main__content {
   background: linear-gradient(to right, $color-dark-skin 60%, $color-light-skin 40%);
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     background: $color-light-skin;
   }
 }
 
 .main__left {
   background-color: $color-dark-skin;
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     background: $color-light-skin;
   }
 }
 
 .main__right {
   background-color: $color-light-skin;
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     background: $color-light-skin;
   }
 }

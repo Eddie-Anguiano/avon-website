@@ -5,7 +5,7 @@
   width: rem(130px);
   background-color: $color-matte-pink;
   border-radius: $border-radius--small;
-  border: 1px solid $color-white;
+  border: rem(1px) solid $color-white;
   color: $color-white;
   transition: background-color 0.3s ease, color 0.3s ease;
 
@@ -13,7 +13,11 @@
   &:active {
     background-color: $color-white;
     color: $color-matte-pink;
-    border: 2px solid $color-matte-pink;
+    border: rem(2px) solid $color-matte-pink;
+  }
+
+  @include d1-mq('medium') {
+    width: 100%;
   }
 }
 
@@ -27,9 +31,22 @@
   border-radius: $border-radius--small;
   @extend %box-shadow;
 
+  @include d1-mq('medium') {
+    width: 100%;
+    flex-direction: row;
+    // min-width: 300px;
+    max-height: rem(150px);
+    margin-bottom: rem(20px);
+  }
+
   &__pic {
     flex: 1;
     @include img-bg($path);
+
+    @include d1-mq('medium') {
+      margin: rem(10px);
+      max-height: rem(150px);
+    }
   }
 
   &__text {
@@ -40,7 +57,7 @@
   }
 
   &__title {
-    margin-bottom: 9px;
+    margin-bottom: rem(9px);
   }
 
   &__summary {

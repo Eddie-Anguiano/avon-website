@@ -10,7 +10,7 @@
 .header__right {
   background-color: $color-dark-skin;
 
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     position: relative;
     z-index: 100;
   }
@@ -25,12 +25,12 @@
     margin-right: rem(35px);
 
     &:first-child {
-      @include d1-mq('large') {
+      @include d1-mq('large-keep') {
         margin-top: 20%;
       }
     }
 
-    @include d1-mq('large') {
+    @include d1-mq('large-keep') {
       margin-bottom: 15%;
       opacity: 0;
     }
@@ -63,12 +63,12 @@
     }
   }
 
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     position: absolute;
-    width: 50%;
+    width: 70%;
     height: 100vh;
     top: rem(35px);
     right: rem(-20px);
@@ -97,7 +97,7 @@
     transition: all 0.3s ease;
   }
 
-  @include d1-mq('large') {
+  @include d1-mq('large-keep') {
     display: flex;
   }
 }
