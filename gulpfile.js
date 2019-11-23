@@ -34,7 +34,7 @@ function css() {
 // css files to be concatenated and minified (vendor files first)
 const cssSrc = ['src/css/main.css'];
 // location on final minified css file
-const buildCSS = 'build/styles';
+const docsCSS = 'docs/styles';
 // name of minified css file
 const minCSS = 'main.min.css';
 
@@ -46,7 +46,7 @@ function concatCSS() {
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./maps/'))
     .pipe(lineec())
-    .pipe(gulp.dest(buildCSS));
+    .pipe(gulp.dest(docsCSS));
 }
 
 // concats js files in specific order (vendors first)
@@ -54,7 +54,7 @@ const jsSRC = ['src/scripts/main.js'];
 // name of minified js file
 const minJS = 'main.min.js';
 // destination of minified js file
-const buildJS = 'build/scripts';
+const docsJS = 'docs/scripts';
 
 function javascript() {
   return gulp
@@ -74,18 +74,18 @@ function javascript() {
     )
     .pipe(uglify())
     .pipe(lineec())
-    .pipe(gulp.dest(buildJS));
+    .pipe(gulp.dest(docsJS));
 }
 
 // images source folders/files
 const imgSrc = 'src/images/**/*';
-// images build file
-const imgBuild = 'build/images/';
+// images docs file
+const imgDocs = 'docs/images/';
 
 function imgmin() {
   return gulp
     .src(imgSrc)
-    .pipe(changed(imgBuild))
+    .pipe(changed(imgDocs))
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -93,7 +93,7 @@ function imgmin() {
         imagemin.optipng({ optimizationLevel: 5 })
       ])
     )
-    .pipe(gulp.dest(imgBuild));
+    .pipe(gulp.dest(imgDocs));
 }
 
 // js files to watch
@@ -104,15 +104,15 @@ const scssWatch = './src/styles/**/*.scss';
 const imgWatch = 'src/images/**/*';
 
 // browser reload on changes to these files
-const jsReload = `build/scripts/main.min.js`;
-const cssReload = `build/styles/main.min.css`;
-const htmlReload = './build/*.html';
+const jsReload = `docs/scripts/main.min.js`;
+const cssReload = `docs/styles/main.min.css`;
+const htmlReload = './docs/*.html';
 
 function watch() {
   browserSync.init({
     browser: 'firefox developer edition',
     server: {
-      baseDir: './build/'
+      baseDir: './docs/'
     }
   });
   gulp.watch(scssWatch, gulp.series([css, concatCSS]));
@@ -127,5 +127,5 @@ exports.javascript = javascript;
 exports.watch = watch;
 exports.imgmin = imgmin;
 
-const build = gulp.parallel(watch);
-gulp.task('default', build);
+const docs = gulp.parallel(watch);
+gulp.task('default', docs);
