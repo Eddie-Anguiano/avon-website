@@ -9,7 +9,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   @include d1-mq('large-keep') {
     overflow-x: hidden;
     position: relative;
