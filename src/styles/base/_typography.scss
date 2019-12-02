@@ -141,3 +141,22 @@ li {
 .card__summary {
   font-size: rem(14px);
 }
+
+/*-------------------------------*/
+/*Contact Page*/
+/*-------------------------------*/
+
+.contact__name {
+  color: $color-white;
+}
+
+.contact__email {
+  color: $color-white;
+
+  font: {
+    family: $font-family--primary;
+    weight: $font-weight--light;
+    size: rem(14px);
+    style: italic;
+  }
+}

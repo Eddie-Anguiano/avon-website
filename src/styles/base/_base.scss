@@ -31,3 +31,9 @@ html {
   opacity: 0.4;
   z-index: 100;
 }
+
+textarea,
+input {
+  border: none;
+  resize: none;
+}

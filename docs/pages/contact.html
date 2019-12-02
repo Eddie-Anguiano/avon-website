@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>universal</title>
+    <title>contact</title>
     <link type="text/css" rel="stylesheet" href="../styles/main.min.css" />
   </head>
 
@@ -12,7 +12,9 @@
     <div class="container">
       <header class="header__left"></header>
       <header class="header__content">
+        <!--Logo-->
         <div class="header__logo"><a href="#">InsiderAvon.com</a></div>
+        <!-- Nav Bar -->
         <ul class="nav">
           <li class="nav__li-item"><a href="#">Shop</a></li>
           <li class="nav__li-item"><a href="#">Sell</a></li>
@@ -28,8 +30,49 @@
       </header>
       <header class="header__right"></header>
 
+      <!-- Content -->
       <main class="main__left"></main>
-      <main class="main__content"></main>
+      <main class="main__content">
+        <div class="main__contact">
+          <div class="contact">
+            <div class="contact__header">
+              <!-- Profile pic -->
+              <div class="contact__pic__container">
+                <div class="contact__pic"></div>
+              </div>
+              <!--Contact Info-->
+              <div class="contact__info__container">
+                <div class="contact__name">Yolanda Anguiano</div>
+                <div class="contact__email">yolanda.anguiano8020@gmail.com</div>
+              </div>
+            </div>
+            <!-- Form -->
+            <form class="contact__form">
+              <div class="contact__form__name-container">
+                <input
+                  type="text"
+                  class="contact__form__first-name-input"
+                  placeholder="First Name"
+                />
+                <input type="text" class="contact__form__last-name-input" placeholder="Last Name" />
+              </div>
+              <input
+                type="text"
+                class="contact__form__email-input"
+                placeholder="Your Email Address"
+              />
+              <textarea
+                type="text"
+                class="contact__form__message-input"
+                placeholder="Your Message"
+              ></textarea>
+            </form>
+            <div class="contact__footer">
+              <div class="call-to-action__button">Send</div>
+            </div>
+          </div>
+        </div>
+      </main>
       <main class="main__right"></main>
 
       <footer class="footer__left"></footer>

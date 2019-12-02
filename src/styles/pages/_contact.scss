@@ -1,0 +1,130 @@
+.main__contact {
+  height: 100%;
+  width: 100%;
+  @extend %center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: rem(700px);
+  max-height: rem(500px);
+
+  @include d1-mq('medium') {
+    max-height: rem(500px);
+  }
+
+  &__header {
+    display: flex;
+    flex: 1;
+    background-color: $color-matte-purple;
+    padding: rem(15px);
+    border-radius: $border-radius--small $border-radius--small 0 0;
+
+    @include d1-mq('medium') {
+      flex: 0;
+    }
+
+    .contact__pic__container {
+      @extend %center;
+      width: 25%;
+
+      .contact__pic {
+        width: rem(90px);
+        height: rem(90px);
+        border-radius: 50%;
+        background-color: white;
+
+        @include d1-mq('medium') {
+          height: rem(60px);
+          width: rem(60px);
+        }
+      }
+    }
+  }
+
+  &__form {
+    flex: 3;
+    background-color: $color-white;
+  }
+
+  &__footer {
+    flex: 1;
+    background-color: $color-matte-purple;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 rem(20px);
+    border-radius: 0 0 $border-radius--small $border-radius--small;
+
+    @include d1-mq('medium') {
+      padding: rem(20px) rem(20px);
+      flex: 0;
+      background-color: $color-white;
+    }
+  }
+}
+
+// Form
+.contact__info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+
+  &__name-container {
+    display: flex;
+    flex: 1;
+
+    @include d1-mq('medium') {
+      flex-direction: column;
+      flex: 2;
+    }
+
+    .contact__form__first-name-input {
+      height: 100%;
+      width: 100%;
+      border-right: rem(2px) solid $color-light-cool-gray;
+
+      @include d1-mq('medium') {
+        border: none;
+      }
+    }
+
+    .contact__form__last-name-input {
+      height: 100%;
+      width: 100%;
+      border: none;
+
+      @include d1-mq('medium') {
+        border-top: rem(2px) solid $color-light-cool-gray;
+      }
+    }
+  }
+
+  & input,
+  textarea {
+    padding: 20px;
+  }
+
+  &__email-input {
+    flex: 1;
+    border: none;
+    border-top: 2px solid $color-light-cool-gray;
+
+    @include d1-mq('medium') {
+      flex: 0.5;
+    }
+  }
+
+  &__message-input {
+    flex: 2;
+    border-top: 2px solid $color-light-cool-gray;
+  }
+}
