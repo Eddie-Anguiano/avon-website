@@ -37,13 +37,14 @@
   }
 
   &__form {
-    flex: 1 1 60%;
+    flex: 1 1 80%;
     display: flex;
     flex-direction: column;
     background-color: $color-white;
+    border-radius: 0 0 $border-radius--small $border-radius--small;
 
     &__name-container {
-      flex: 1 1 25%;
+      flex: 1 1 20%;
       display: flex;
 
       .contact__form__first-name-input {
@@ -67,7 +68,7 @@
     }
 
     &__email-input {
-      flex: 1 1 25%;
+      flex: 1 1 20%;
       border-top: rem(2px) solid $color-light-cool-gray;
 
       @include d1-mq('medium') {
@@ -76,26 +77,21 @@
     }
 
     &__message-input {
-      flex: 1 1 50%;
+      flex: 1 1 40%;
       border-top: rem(2px) solid $color-light-cool-gray;
 
       @include d1-mq('medium') {
         flex: 1 1 40%;
       }
     }
-  }
 
-  &__footer {
-    flex: 1 1 20%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: $color-matte-purple;
-    border-radius: 0 0 $border-radius--small $border-radius--small;
-    padding: rem(15px);
-
-    @include d1-mq('medium') {
-      background-color: $color-white;
+    .contact__footer {
+      flex: 1 1 20%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-top: rem(2px) solid $color-light-cool-gray;
+      padding: 15px;
     }
   }
 

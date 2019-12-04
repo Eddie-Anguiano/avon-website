@@ -47,29 +47,41 @@
               </div>
             </div>
             <!-- Form -->
-            <form class="contact__form">
+            <form class="contact__form" action="https://formspree.io/mjvkolqa" method="POST">
               <div class="contact__form__name-container">
                 <input
                   type="text"
                   class="contact__form__first-name-input"
                   placeholder="First Name"
+                  name="first-name"
+                  required
                 />
-                <input type="text" class="contact__form__last-name-input" placeholder="Last Name" />
+                <input
+                  type="text"
+                  class="contact__form__last-name-input"
+                  placeholder="Last Name"
+                  name="last-name"
+                  required
+                />
               </div>
               <input
-                type="text"
+                type="email"
                 class="contact__form__email-input"
                 placeholder="Your Email Address"
+                name="_replyto"
+                required
               />
               <textarea
                 type="text"
                 class="contact__form__message-input"
                 placeholder="Your Message"
+                name="message"
+                required
               ></textarea>
+              <div class="contact__footer">
+                <input type="submit" value="Send" class="call-to-action__button" />
+              </div>
             </form>
-            <div class="contact__footer">
-              <div class="call-to-action__button">Send</div>
-            </div>
           </div>
         </div>
       </main>
