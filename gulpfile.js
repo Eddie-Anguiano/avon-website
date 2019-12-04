@@ -110,7 +110,7 @@ const htmlReload = './docs/*.html';
 
 function watch() {
   browserSync.init({
-    browser: 'firefox developer edition',
+    browser: 'safari',
     server: {
       baseDir: './docs/'
     }
