@@ -18,7 +18,7 @@ const navSlider = () => {
       if (link.style.animation) {
         link.style.animation = '';
       } else {
-        link.style.animation = `navLink .5s ease forwards ${index / 7 + 0.1}s`;
+        link.style.animation = `navLink .4s ease forwards ${index / 7 + 0.1}s`;
       }
     });
 
