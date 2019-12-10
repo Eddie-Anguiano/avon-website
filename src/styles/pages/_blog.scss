@@ -10,6 +10,12 @@
   width: rem(760px);
   border-radius: $border-radius--small;
 
+  @include d1-mq('medium') {
+    background-color: transparent;
+    padding: 0px;
+    width: 100%;
+  }
+
   .blog__header {
     margin-bottom: 0px;
   }
@@ -30,7 +36,7 @@
 
   .blog-line {
     height: 2px;
-    background-color: black;
+    background-color: $color-black;
     width: 100%;
   }
 
@@ -50,5 +56,19 @@
     width: 200px;
     float: left;
     margin: 0 rem(20px) rem(20px) 0;
+
+    @include d1-mq('medium') {
+      float: none;
+      order: 5;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .blog__img-section-wrapper {
+    @include d1-mq('medium') {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

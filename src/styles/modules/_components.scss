@@ -32,11 +32,15 @@
   border-radius: 0 0 $border-radius--small $border-radius--small;
   opacity: 0.8;
   text-align: center;
-  padding: 9px;
-  color: white;
+  color: $color-white;
+  @extend %center;
 
   &:hover {
     opacity: 1;
+  }
+
+  @include d1-mq('medium') {
+    // padding: rem(50px);
   }
 }
 
