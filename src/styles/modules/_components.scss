@@ -21,6 +21,25 @@
   }
 }
 
+.blog__shop-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+  width: 100%;
+  background-color: $color-matte-purple;
+  z-index: 100;
+  border-radius: 0 0 $border-radius--small $border-radius--small;
+  opacity: 0.8;
+  text-align: center;
+  padding: 9px;
+  color: white;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 // Cards
 @mixin card($path) {
   display: flex;

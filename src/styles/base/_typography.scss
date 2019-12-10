@@ -5,6 +5,7 @@
 body {
   font-family: $font-family--primary;
   word-spacing: $base__word-spacing;
+  color: $color-black;
 }
 
 h1,
@@ -159,4 +160,35 @@ li {
     size: rem(14px);
     style: italic;
   }
+}
+
+/*-------------------------------*/
+/*Blog*/
+/*-------------------------------*/
+
+.blog__header {
+  font-family: $font-family--primary;
+}
+
+.blog__header--italicized {
+  font-weight: $font-weight--light;
+}
+
+.blog__subheader--italicized {
+  font-size: rem(18px);
+  font-weight: $font-weight--light;
+  font-style: italic;
+}
+
+.blog__author,
+.blog__date {
+  font-size: rem(14px);
+  font-family: $font-family--secondary;
+  font-weight: $font-weight--light;
+  font-style: italic;
+}
+
+.blog__subheader {
+  font-size: rem(24px);
+  font-weight: $font-weight--regular;
 }
