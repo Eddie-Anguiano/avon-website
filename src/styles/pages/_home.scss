@@ -1,8 +1,42 @@
+// Home Container
+
+.home-container {
+  display: flex;
+  height: 100%;
+
+  @include d1-mq('large-keep') {
+    flex-direction: column;
+  }
+}
+
+.hero {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: rem(600px);
+
+  @include d1-mq('large-keep') {
+    align-items: center;
+  }
+
+  @include d1-mq('medium') {
+    margin-bottom: rem(50px);
+  }
+}
+
+.home-content {
+  flex: 1 1 45%;
+}
+
 // Profile
+
 .profile__background {
   height: auto;
   width: 90%;
   border-radius: $border-radius--small;
+  margin-bottom: rem(50px);
+  max-width: rem(670px);
 
   @include d1-mq('large') {
     width: 100%;
@@ -43,196 +77,103 @@
   }
 }
 
-// Call to action
+// Call to Action
+
 .call-to-action {
-  @include d1-mq('medium') {
-    display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//Shop Banner
+
+.shop-banner {
+  @include img-bg('../images/home-page/shop-banner-background.jpg', $color-black, 0.5);
+
+  @extend %center;
+}
+
+// FAQ Banner
+
+.faq-banner {
+  background-color: $color-matte-purple;
+
+  &__header {
     text-align: center;
+    margin-bottom: rem(15px);
+  }
+
+  &__subheader {
+    margin-bottom: rem(15px);
   }
 }
 
-// Separator (mobile)
-.separator {
-  display: none;
+// Blog Banner
 
-  &__line {
-    height: rem(1px);
-    width: 100%;
-    background-color: $color-dark-brown;
+.blog-banner {
+  background-color: $color-white;
+  border-radius: 0 0 $border-radius--small $border-radius--small;
+
+  &__pic {
+    height: 100%;
+    width: auto;
+    float: left;
+    padding-right: rem(15px);
+
+    @include d1-mq('medium') {
+      height: auto;
+      width: 100%;
+      margin-bottom: rem(15px);
+    }
   }
 
-  &__text {
-    margin: 0 rem(20px);
+  &__header {
+    margin-bottom: rem(15px);
+  }
+
+  @include d1-mq('large-keep') {
+    margin-bottom: rem(50px);
   }
 
   @include d1-mq('medium') {
     display: flex;
-    align-items: center;
-  }
-}
-
-// Shop
-.shop {
-  @include d1-mq('medium') {
-    background-color: $color-dark-skin;
-    padding: rem(20px);
-    border-radius: $border-radius--small;
-    margin-bottom: rem(40px);
-  }
-}
-
-.shop__heading {
-  position: relative;
-  z-index: 99;
-  margin-bottom: rem(20px);
-}
-
-.shop__pic {
-  position: relative;
-  z-index: 99;
-
-  &::before {
-    content: '';
-    height: 100%;
-    width: 100%;
-    background-color: $color-dark-skin;
-    position: absolute;
-    top: rem(20px);
-    left: rem(-25px);
-    z-index: -1;
-    border-radius: $border-radius--small;
-
-    @include d1-mq('medium') {
-      display: none;
-    }
-  }
-
-  &::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    background-color: $color-dark-skin;
-    position: absolute;
-    bottom: rem(20px);
-    right: rem(-25px);
-    z-index: -1;
-    border-radius: $border-radius--small;
-
-    @include d1-mq('medium') {
-      display: none;
-    }
-  }
-}
-
-// blog
-.blog__section {
-  @include img-bg('../images/brushes.png', $color-white, 0.1);
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
-  padding: rem(25px);
-  width: 100%;
-  background-color: $color-white;
-  border-radius: $border-radius--small;
-
-  @include d1-mq('medium') {
-    padding: rem(5px) 0;
-    background-image: none;
-    background-color: transparent;
     flex-direction: column;
   }
 }
 
-.blog__heading,
-.product__heading {
-  text-align: center;
-  margin-bottom: rem(13px);
-}
-
-.blog__cards,
-.product__cards {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.blog__cards {
-  @include d1-mq('large') {
-    margin-bottom: rem(20px);
-  }
-}
-
-.card + .card {
-  margin-left: rem(25px);
-
-  @include d1-mq('medium') {
-    margin-left: 0px;
-  }
-}
-
-.cards__container {
-  display: flex;
-  justify-content: center;
-
-  @include d1-mq('medium') {
-    flex-wrap: wrap;
-  }
-}
-
-.card {
-  @include card('../images/home-page/card-pic.png');
-}
-
-.card__blog-face-shop {
-  @include card('../images/home-page/face-shop.jpg');
-  border: 2px solid red;
-}
-
-//FAQ
-.faq__section {
-  display: flex;
-  justify-content: center;
-
-  flex-direction: column;
-  padding: 10%;
-  height: 100%;
-  width: 100%;
-  background-color: $color-matte-purple;
-  border-radius: $border-radius--small;
-
-  @include d1-mq('medium') {
-    margin-bottom: rem(20px);
-  }
-}
-
-.faq__header {
-  margin-bottom: 10%;
-  text-align: center;
-}
-
-.faq__sub-header {
-  position: relative;
-  margin-bottom: 5%;
-
-  &::before {
-    content: '';
-    height: rem(5px);
-    width: rem(5px);
-    border-radius: 50%;
-    position: absolute;
-    left: rem(-10px);
-    top: rem(8px);
-    background-color: $color-white;
-  }
-}
-
-.faq__content {
-  max-height: rem(215px);
-  overflow: scroll;
-  margin-bottom: 10%;
-}
-
-.faq__link {
+.read-more {
+  margin-top: rem(15px);
   text-align: right;
+}
+
+// Blocks
+
+.card-block {
+  height: rem(200px);
+  width: 100%;
+  padding: rem(15px);
+  overflow: hidden;
+  max-width: rem(800px);
+
+  @include d1-mq('large') {
+    height: rem(250px);
+  }
+
+  @include d1-mq('medium') {
+    height: rem(300px);
+  }
+}
+
+.card-block--double {
+  @include d1-mq('medium') {
+    height: auto !important;
+  }
 }

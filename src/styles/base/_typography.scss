@@ -82,65 +82,47 @@ li {
 .call-to-action__text {
   font-style: italic;
   font-weight: $font-weight--light;
-  font-size: rem(24px);
+  font-size: rem(40px);
   color: $color-dark-brown;
+
+  @include d1-mq('medium') {
+    font-size: rem(24px);
+  }
 }
 
-// Separator (mobile)
-.separator__text {
-  color: $color-dark-brown;
-}
-
-// Shop
-.shop__heading {
-  @extend %link-heading;
-  color: $color-dark-brown;
-}
-
-// Blog Section
-.blog__heading,
-.product__heading {
-  @extend %link-heading;
-  text-decoration: underline;
-}
-
-// FAQ
-
-.faq {
+//shop banner
+.shop-banner__cta {
   color: $color-white;
+  font-family: $font-family--secondary;
+  font-weight: $font-weight--light;
+}
+
+//faq banner
+.faq-banner {
+  color: $color-white;
+
   &__header {
-    font-family: $font-family--secondary;
-    font-weight: $font-weight--semi-bold;
+    font-size: rem(18px);
+    font-weight: $font-weight--regular;
   }
 
-  &__sub-header,
-  &__link {
+  &__subheader,
+  .read-more {
+    font-style: italic;
     font-weight: $font-weight--light;
+  }
+
+  &__text {
+    font-size: rem(16px);
+  }
+}
+
+//blog banner
+.blog-banner {
+  &__header {
+    font-weight: $font-weight--regular;
     font-style: italic;
   }
-}
-
-/*-------------------------------*/
-/*Modules*/
-/*-------------------------------*/
-
-// Cards
-.card {
-  color: $color-white;
-}
-
-.card__title,
-.card__link {
-  font: {
-    family: $font-family--primary;
-    weight: $font-weight--light;
-    size: rem(14px);
-    style: italic;
-  }
-}
-
-.card__summary {
-  font-size: rem(14px);
 }
 
 /*-------------------------------*/

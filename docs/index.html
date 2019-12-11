@@ -6,29 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link type="text/css" rel="stylesheet" href="styles/main.min.css" />
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
+
   <body>
     <div class="container">
-
-      <!-- header -->
       <header class="header__left"></header>
       <header class="header__content">
         <!--Logo-->
-        <div class="header__logo"><a href="#">theBeautyRep.com</a></div>
+        <div class="header__logo"><a href="../index.html">theBeautyRep.com</a></div>
         <!-- Nav Bar -->
         <ul class="nav">
+          <li class="nav__li-item"><a href="../index.html">Home</a></li>
           <li class="nav__li-item">
             <a href="https://www.avon.com/brochure?rep=avonbyyolanda#/1/201926/en/1">Shop</a>
           </li>
           <li class="nav__li-item">
             <a
-              href="https://www.youravon.com/home/signup?siteid=avon&p=BaRTopM&c=BaRTopM&s=BaRTopM&shopURL=avonbyyolanda">Sell</a>
+              href="https://www.youravon.com/home/signup?siteid=avon&p=BaRTopM&c=BaRTopM&s=BaRTopM&shopURL=avonbyyolanda"
+              >Sell</a
+            >
           </li>
-          <li class="nav__li-item"><a href="pages/contact.html">Contact</a></li>
+          <li class="nav__li-item"><a href="contact.html">Contact</a></li>
           <!-- <li class="nav__li-item"><a href="#">Blog</a></li> -->
-          <li class="nav__li-item"><a href="pages/faq.html">FAQ</a></li>
+          <li class="nav__li-item"><a href="#">FAQ</a></li>
         </ul>
         <div class="menu">
           <div class="menu__line menu__line1"></div>
@@ -38,120 +46,82 @@
       </header>
       <header class="header__right"></header>
 
-      <main class="main__left">
-      </main>
-      <main class="main__content main__content-blackout">
-        <!-- main -->
-        <div class="main__index">
-          <!-- profile -->
-          <div class="profile">
-            <div class="profile__background">
-              <div class="profile__picture"></div>
-              <p class="profile__text">Welcome to Avon by Yolanda. I have been with the iconic Avon brand since 1986. Over the 33 years, I have been a Top
-              Seller, a Leadership Representative and a District Sales Manager.  I love the flexibility of this
-              business as well as the products. During this time, I have raised two children while working my business both part time and full time. I am now a
-              Gold Leader with a team of over 300 Avon Representatives and a President’s Club member. My passion is mentoring
-              Avon Representatives and watching them grow a business that fits THEIR needs.</p>
-              <div class="icons">
-                <a href="pages/contact.html"><ion-icon class="icons__item" name="mail"></ion-icon></a>
-                <a href="#"><ion-icon class="icons__item" name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon class="icons__item" name="logo-instagram"></ion-icon></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- call to action -->
-          <div class="call-to-action">
-            <h1 class="call-to-action__text">Start Your Journey Today!</h1>
-            <a href="https://www.youravon.com/home/signup?siteid=avon&p=BaRTopM&c=BaRTopM&s=BaRTopM&shopURL=avonbyyolanda" class="call-to-action__button">Sign Up</a>
-          </div>
-
-          <div class="separator">
-            <div class="separator__line"></div>
-            <div class="separator__text">or</div>
-            <div class="separator__line"></div>
-          </div>
-
-          <!-- shop -->
-          <div class="shop">
-            <a href="https://www.avon.com/brochure?rep=avonbyyolanda#/1/201926/en/1" class="shop__heading">Shop Brochure</a>
-            <a class="shop__pic" href="https://www.avon.com/brochure?rep=avonbyyolanda#/1/201926/en/1">
-              <img src="images/home-page/brochure-current.png" alt="catalog link"></img>
-            </a>
-          </div>
-
-          <!-- blog -->
-          <div class="blog">
-
-            <div class="blog__section">
-
-              <div class="blog__cards">
-                <a href="#" class="blog__heading">Blog Posts</a>
-                <div class="cards__container">
-                  <div class="card">
-                    <div class="card__pic"></div>
-                    <div class="card__text">
-                      <div class="card__title">Coming soon!</div>
-                      <div class="card__summary"></div>
-                      <div class="card__link">...more</div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card__pic"></div>
-                    <div class="card__text">
-                      <div class="card__title">Coming soon!</div>
-                      <div class="card__summary"></div>
-                      <div class="card__link">...more</div>
-                    </div>
-                  </div>
-                </div> 
-              </div>
-
-              <div class="product__cards">
-                <a href="#" class="product__heading">Products</a>
-                <div class="cards__container">
-                  <a href="pages/blog-face-shop.html" class="card">
-                    <div class="card__pic"></div>
-                    <div class="card__text">
-                      <div class="card__title">Coming soon!</div>
-                      <div class="card__summary"></div>
-                      <div class="card__link">...more</div>
-                    </div>
+      <main class="main__left"></main>
+      <!-- Content -->
+      <main class="main__content">
+        <div class="home-container">
+          <section class="hero">
+            <div class="profile">
+              <div class="profile__background">
+                <div class="profile__picture"></div>
+                <p class="profile__text">
+                  Welcome to Avon by Yolanda. I have been with the iconic Avon brand since 1986.
+                  Over the 33 years, I have been a Top Seller, a Leadership Representative and a
+                  District Sales Manager. I love the flexibility of this business as well as the
+                  products. During this time, I have raised two children while working my business
+                  both part time and full time. I am now a Gold Leader with a team of over 300 Avon
+                  Representatives and a President’s Club member. My passion is mentoring Avon
+                  Representatives and watching them grow a business that fits THEIR needs.
+                </p>
+                <div class="icons">
+                  <a href="pages/contact.html">
+                    <ion-icon class="icons__item" name="mail"></ion-icon>
                   </a>
-                  <div class="card">
-                    <div class="card__pic"></div>
-                    <div class="card__text">
-                      <div class="card__title">Coming soon!</div>
-                      <div class="card__summary"></div>
-                      <div class="card__link">...more</div>
-                    </div>
-                  </div>
+                  <a href="#">
+                    <ion-icon class="icons__item" name="logo-facebook"></ion-icon>
+                  </a>
+                  <a href="#">
+                    <ion-icon class="icons__item" name="logo-instagram"></ion-icon>
+                  </a>
                 </div>
               </div>
-
-              </div>
             </div>
 
-            
-
-          <!-- faq -->
-          <a href="pages/faq.html" class="faq">
-            <div class="faq__section">
-              <div class="faq__header">Frequently Asked Question</div>
-              <div class="faq__sub-header">What products does Avon sell?</div>
-              <div class="faq__content">Avon introduces the Face Shop! Along with Avon branded products such as Skin So Soft,
-              Anew Skin Care and True Color Makeup, Avon is now selling naturally based products from
-              the Face Shop. The company also carries jewelry, personal care products, products for
-              men and children, clothing and home decor.</div>
-              <div class="faq__link">See All ...</div>
+            <div class="call-to-action">
+              <h1 class="call-to-action__text">Start Your Journey Today!</h1>
+              <a
+                href="https://www.youravon.com/home/signup?siteid=avon&p=BaRTopM&c=BaRTopM&s=BaRTopM&shopURL=avonbyyolanda"
+                class="main-call-to-action__button"
+                >Sign Up</a
+              >
             </div>
-          </a>
+          </section>
+
+          <section class="home-content">
+            <a
+              href="https://www.avon.com/brochure?rep=avonbyyolanda#/1/201926/en/1"
+              class="shop-banner card-block"
+            >
+              <h1 class="shop-banner__cta">Shop Brochure</h1>
+            </a>
+
+            <a href="pages/faq.html" class="faq-banner card-block">
+              <h2 class="faq-banner__header">Frequently Asked Questions</h2>
+              <div class="faq-banner__subheader">What products does Avon sell?</div>
+              <p class="faq-banner__text">
+                Avon introduces the Face Shop! Along with Avon branded products such as Skin So
+                Soft, Anew Skin Care and True Color Makeup, Avon is now selling naturally based
+                products from the Face Shop. The company also carries jewelry, personal care
+                products, products for men and children, clothing and...
+              </p>
+              <div class="read-more">...read more</div>
+            </a>
+
+            <a href="pages/blog-face-shop.html" class="blog-banner card-block card-block--double">
+              <img class="blog-banner__pic" src="images/home-page/face-shop.jpg" />
+              <h2 class="blog-banner__header">Introducing...The Face Shop</h2>
+              <p class="blog-banner__text">
+                The Face Shop, a Korean brand of skin care and makeup has finally arrived at Avon.
+                Discover our new collaboration with cutting edge Korean Beauty Products. The Korean
+                beauty market is known for...
+              </p>
+              <div class="read-more">...read more</div>
+            </a>
+          </section>
         </div>
+      </main>
+      <main class="main__right"></main>
 
-      </main>
-      <main class="main__right">
-      </main>
-      <!-- footer -->
       <footer class="footer__left"></footer>
       <footer class="footer__content">
         <ul class="footer__links">
@@ -160,9 +130,11 @@
           </li>
           <li class="footer__links__item">
             <a
-              href="https://www.youravon.com/home/signup?siteid=avon&p=BaRTopM&c=BaRTopM&s=BaRTopM&shopURL=avonbyyolanda">Sell</a>
+              href="https://www.youravon.com/home/signup?siteid=avon&p=BaRTopM&c=BaRTopM&s=BaRTopM&shopURL=avonbyyolanda"
+              >Sell</a
+            >
           </li>
-          <li class="footer__links__item"><a href="contact.html">Contact</a></li>
+          <li class="footer__links__item"><a href="pages/contact.html">Contact</a></li>
           <!-- <li class="footer__links__item"><a href="#">Blog</a></li> -->
           <li class="footer__links__item"><a href="pages/faq.html">FAQ</a></li>
         </ul>
@@ -170,6 +142,6 @@
       <footer class="footer__right"></footer>
     </div>
 
-    <script src="scripts/main.min.js"></script>
+    <script src="../scripts/main.min.js"></script>
   </body>
 </html>
