@@ -22,6 +22,9 @@
   border-radius: 50%;
   float: left;
   margin: rem(15px);
+  border: rem(2px) solid $color-white;
+
+  @include img-bg('../images/home-page/profile-pic.jpg');
 
   @include d1-mq('medium') {
     height: rem(100px);
@@ -179,6 +182,11 @@
 
 .card {
   @include card('../images/home-page/card-pic.png');
+}
+
+.card__blog-face-shop {
+  @include card('../images/home-page/face-shop.jpg');
+  border: 2px solid red;
 }
 
 //FAQ

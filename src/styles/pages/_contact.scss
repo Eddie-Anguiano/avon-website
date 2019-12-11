@@ -25,6 +25,9 @@
         width: rem(70px);
         background-color: $color-white;
         border-radius: 50%;
+        border: rem(2px) solid $color-white;
+
+        @include img-bg('../images/home-page/profile-pic.jpg');
       }
     }
 
