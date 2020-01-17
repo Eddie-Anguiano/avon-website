@@ -30,18 +30,9 @@
 
   .blog__subheader {
     margin: 0 0 rem(15px) 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid $color-black;
-  }
-
-  .blog-line {
-    height: 2px;
-    background-color: $color-black;
-    width: 100%;
   }
 
   .blog__paragraph {
-    text-indent: rem(40px);
     margin-bottom: rem(40px);
   }
 
