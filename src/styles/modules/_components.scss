@@ -21,25 +21,55 @@
   }
 }
 
-.main-call-to-action__button {
-  @extend %center;
+.call-to-action__btn {
   height: rem(50px);
-  width: rem(230px);
-  background-color: $color-matte-pink;
-  border-radius: $border-radius--small;
-  border: rem(1px) solid $color-white;
+  width: rem(150px);
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
   color: $color-white;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: $border-radius--small;
 
-  &:hover,
-  &:active {
-    background-color: $color-white;
-    color: $color-matte-pink;
-    border: rem(2px) solid $color-matte-pink;
+  &--main {
+    background-color: $color-matte-pink;
+    border: rem(3px) solid $color-white;
   }
 
-  @include d1-mq('medium') {
-    width: 100%;
+  &--secondary {
+    border: rem(3px) solid $color-matte-pink;
+  }
+
+  @include d1-mq('large-keep') {
+    display: none;
+  }
+}
+
+.cta-mobile__container {
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  column-gap: rem(20px);
+  display: none;
+  margin-top: rem(20px);
+
+  @include d1-mq('large-keep') {
+    display: grid;
+  }
+}
+
+.cta-mobile {
+  @extend %center;
+  padding: rem(10px);
+  color: white;
+
+  &--main {
+    background-color: $color-matte-pink;
+    border: rem(3px) solid $color-white;
+  }
+
+  &--secondary {
+    background-color: $color-white;
+    border: rem(3px) solid $color-matte-pink;
+    color: $color-matte-pink;
   }
 }
 
@@ -63,5 +93,53 @@
 
   @include d1-mq('medium') {
     // padding: rem(50px);
+  }
+}
+
+// Cards
+
+.blogs-card {
+  height: rem(450px);
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  border-radius: $border-radius--small;
+
+  &__img {
+    object-fit: cover;
+    border: rem(8px) solid white;
+    height: 60%;
+    width: 100%;
+    border-radius: $border-radius--small;
+  }
+
+  &__content {
+    width: 80%;
+    margin: 0 auto;
+    height: 60%;
+    margin-top: rem(-97px);
+    padding: rem(10px);
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: $border-radius--small;
+  }
+
+  &__header {
+    flex: 2;
+  }
+
+  &__paragraph {
+    flex: 6;
+    overflow: hidden;
+  }
+
+  &__read-more {
+    text-align: right;
+    flex: 1.5;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }

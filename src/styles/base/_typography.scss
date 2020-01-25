@@ -73,56 +73,49 @@ li {
 /*Home Page*/
 /*-------------------------------*/
 
-// Profile
-.profile__text {
-  color: $color-dark-brown;
-}
+// Hero Section
 
-// Call to action
-.call-to-action__text {
-  font-style: italic;
-  font-weight: $font-weight--light;
-  font-size: rem(40px);
-  color: $color-dark-brown;
-
-  @include d1-mq('medium') {
-    font-size: rem(24px);
-  }
-}
-
-//shop banner
-.shop-banner__cta {
+.profile__content {
   color: $color-white;
+}
+
+.call-to-action__header {
+  font-size: rem(35px);
   font-family: $font-family--secondary;
-  font-weight: $font-weight--light;
-}
+  font-style: italic;
 
-//faq banner
-.faq-banner {
-  color: $color-white;
-
-  &__header {
-    font-size: rem(18px);
-    font-weight: $font-weight--regular;
-  }
-
-  &__subheader,
-  .read-more {
-    font-style: italic;
-    font-weight: $font-weight--light;
-  }
-
-  &__text {
-    font-size: rem(16px);
+  &--mobile {
+    color: $color-dark-brown;
+    font: {
+      size: rem(20px);
+      family: $font-family--secondary;
+      style: italic;
+    }
   }
 }
 
-//blog banner
-.blog-banner {
-  &__header {
-    font-weight: $font-weight--regular;
-    font-style: italic;
+// Recent Blogs Section
+
+.recent-blogs__header {
+  font-size: rem(20px);
+  font-family: $font-family--secondary;
+  color: $color-dark-brown;
+}
+
+.blogs-card__header {
+  font: {
+    size: rem(16px);
+    family: $font-family--secondary;
+    style: italic;
   }
+}
+
+.blogs-card__paragraph {
+  font-size: 14px;
+}
+
+.blogs-card__read-more {
+  font-style: italic;
 }
 
 /*-------------------------------*/
