@@ -19,6 +19,10 @@ section {
   justify-content: center;
   flex-direction: column;
   height: rem(500px);
+
+  @include d1-mq('medium') {
+    height: rem(650px);
+  }
 }
 
 .profile {
