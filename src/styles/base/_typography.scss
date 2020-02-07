@@ -143,6 +143,8 @@ li {
 
 .blog__header {
   font-family: $font-family--primary;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .blog__header--italicized {
@@ -166,4 +168,14 @@ li {
 .blog__subheader {
   font-size: rem(24px);
   font-weight: $font-weight--regular;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/*-------------------------------*/
+/*Utility*/
+/*-------------------------------*/
+
+.font--bold {
+  font-weight: 800;
 }
