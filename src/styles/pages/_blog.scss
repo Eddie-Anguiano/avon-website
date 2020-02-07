@@ -68,15 +68,15 @@
   }
 
   .blog__list-item {
-    display: flex;
-    margin-bottom: rem(15px);
+    margin-bottom: rem(30px);
+    @extend %clearfix;
   }
 
   .blog__list-img {
-    margin-top: rem(3px);
-    height: rem(100px);
-    width: rem(100px);
-    object-fit: cover;
+    float: left;
+    padding-top: rem(3px);
+    height: 100px;
+    width: 100px;
     margin-right: rem(15px);
   }
 }
