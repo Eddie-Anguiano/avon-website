@@ -5,15 +5,7 @@
 body {
   font-family: $font-family--primary;
   word-spacing: $base__word-spacing;
-  color: $color-black;
-}
-
-h1,
-h2,
-h3 h4,
-h5,
-h6 {
-  font-family: $font-family--secondary;
+  color: $color-dark-brown;
 }
 
 a {
@@ -41,25 +33,20 @@ li {
 
 .header__logo a {
   font: {
-    family: $font-family--secondary;
+    family: $font-family--primary;
     size: rem(22px);
-  }
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $color-dark-purple;
   }
 }
 
 .nav {
-  font-family: $font-family--secondary;
+  font-family: $font-family--primary;
   letter-spacing: rem(1.5px);
 }
 
 // Site Footer
 .footer__links {
   font: {
-    font: $font-family--secondary;
+    font: $font-family--primary;
     size: rem(12px);
   }
 
@@ -76,19 +63,20 @@ li {
 // Hero Section
 
 .profile__content {
-  color: $color-white;
+  color: $color-dark-brown;
+  font-size: 16px;
 }
 
 .call-to-action__header {
   font-size: rem(35px);
-  font-family: $font-family--secondary;
-  font-style: italic;
+  font-family: $font-family--primary;
+  color: $color-white;
 
   &--mobile {
     color: $color-dark-brown;
     font: {
       size: rem(20px);
-      family: $font-family--secondary;
+      family: $font-family--primary;
       style: italic;
     }
   }
@@ -98,20 +86,19 @@ li {
 
 .recent-blogs__header {
   font-size: rem(20px);
-  font-family: $font-family--secondary;
+  font-family: $font-family--primary;
   color: $color-dark-brown;
 }
 
 .blogs-card__header {
-  font: {
-    size: rem(16px);
-    family: $font-family--secondary;
-    style: italic;
-  }
+  font-size: rem(18px);
+  font-weight: $font-weight--bold !important;
+  color: $color-matte-purple;
 }
 
 .blogs-card__paragraph {
   font-size: 14px;
+  color: $color-dark-brown;
 }
 
 .blogs-card__read-more {
@@ -143,12 +130,8 @@ li {
 
 .blog__header {
   font-family: $font-family--primary;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.blog__header--italicized {
-  font-weight: $font-weight--light;
+  font-weight: $font-weight--bold;
+  font-size: rem(40px);
 }
 
 .blog__subheader--italicized {
@@ -160,16 +143,15 @@ li {
 .blog__author,
 .blog__date {
   font-size: rem(14px);
-  font-family: $font-family--secondary;
+  font-family: $font-family--primary;
   font-weight: $font-weight--light;
   font-style: italic;
 }
 
 .blog__subheader {
-  font-size: rem(24px);
-  font-weight: $font-weight--regular;
-  font-style: italic;
-  font-weight: 600;
+  font-size: rem(18px);
+  font-weight: $font-weight--bold;
+  color: $color-matte-purple;
 }
 
 /*-------------------------------*/
@@ -178,4 +160,5 @@ li {
 
 .font--bold {
   font-weight: 800;
+  color: $color-matte-purple;
 }

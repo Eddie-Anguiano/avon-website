@@ -52,11 +52,11 @@
 
       .contact__form__first-name-input {
         flex: 1 1 50%;
-        border-right: rem(2px) solid $color-light-cool-gray;
+        border-right: rem(2px) solid $color-light-skin;
 
         @include d1-mq('medium') {
           border-right: none;
-          border-bottom: rem(2px) solid $color-light-cool-gray;
+          border-bottom: rem(2px) solid $color-light-skin;
         }
       }
 
@@ -72,7 +72,7 @@
 
     &__email-input {
       flex: 1 1 20%;
-      border-top: rem(2px) solid $color-light-cool-gray;
+      border-top: rem(2px) solid $color-light-skin;
 
       @include d1-mq('medium') {
         flex: 1 1 20%;
@@ -81,7 +81,7 @@
 
     &__message-input {
       flex: 1 1 40%;
-      border-top: rem(2px) solid $color-light-cool-gray;
+      border-top: rem(2px) solid $color-light-skin;
 
       @include d1-mq('medium') {
         flex: 1 1 40%;
@@ -93,7 +93,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      border-top: rem(2px) solid $color-light-cool-gray;
+      border-top: rem(2px) solid $color-light-skin;
       padding: 15px;
     }
   }

@@ -33,7 +33,6 @@
 
   .blog__subheader {
     margin: 0 0 rem(5px) 0;
-    font-weight: 500;
   }
 
   .blog__paragraph {
@@ -57,6 +56,10 @@
       order: 5;
       width: 100%;
       height: auto;
+    }
+
+    @include d1-mq('large-keep') {
+      margin-bottom: rem(30px);
     }
   }
 
