@@ -21,7 +21,7 @@ section {
   height: rem(500px);
 
   @include d1-mq('medium') {
-    height: rem(650px);
+    min-height: rem(550px);
   }
 }
 
@@ -40,11 +40,20 @@ section {
     border-radius: $border-radius--small;
 
     @include d1-mq(('large-keep')) {
-      height: rem(200px);
-      width: rem(200px);
-      z-index: 3;
+      display: none;
+    }
+
+    &-mobile {
+      height: rem(125px);
+      width: rem(125px);
+      float: left;
+      margin: 0 rem(20px) 0 0;
       border-radius: 100px;
-      margin-bottom: 10px;
+      display: none;
+
+      @include d1-mq('large-keep') {
+        display: inline-block;
+      }
     }
   }
 
@@ -61,7 +70,7 @@ section {
       margin-left: 0;
       max-width: 100%;
       max-height: rem(1000px);
-      padding: rem(10px);
+      padding: rem(20px);
     }
   }
 
@@ -111,7 +120,7 @@ section {
     display: Flex;
     align-items: center;
     height: rem(50px);
-    margin-top: 50px;
+    margin-top: rem(50px);
   }
 
   &__card-container {
