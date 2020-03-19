@@ -152,6 +152,11 @@ li {
   font-size: rem(18px);
   font-weight: $font-weight--bold;
   color: $color-matte-purple;
+
+  %--brown {
+    color: $color-dark-brown;
+    padding-bottom: rem(150px) !important;
+  }
 }
 
 /*-------------------------------*/

@@ -61,6 +61,14 @@
     @include d1-mq('large-keep') {
       margin-bottom: rem(30px);
     }
+
+    &--small {
+      height: 100px;
+      width: 100px;
+      position: relative;
+      float: left;
+      margin: 0 rem(20px) rem(5px) 0;
+    }
   }
 
   .blog__img-section-wrapper {
@@ -88,4 +96,16 @@
   @include d1-mq('medium') {
     background-color: $color-white;
   }
+}
+
+.blog__indent-item {
+  margin: 0px 0px 20px 0px;
+
+  &--margin-bottom {
+    margin-bottom: rem(60px);
+  }
+}
+
+.blog__paragraph--indent {
+  margin: rem(15px) 0px;
 }
